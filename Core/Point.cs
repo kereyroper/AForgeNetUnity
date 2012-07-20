@@ -9,6 +9,7 @@
 namespace AForge
 {
     using System;
+	using UnityEngine;
 
     /// <summary>
     /// Structure for representing a pair of coordinates of float type.
@@ -347,7 +348,7 @@ namespace AForge
         /// 
         public IntPoint Round( )
         {
-            return new IntPoint( (int) Math.Round( X ), (int) Math.Round( Y ) );
+            return new IntPoint( (int) Mathf.Round( X ), (int) Mathf.Round( Y ) );
         }
 
         /// <summary>

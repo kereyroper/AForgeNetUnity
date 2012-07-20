@@ -158,13 +158,13 @@ namespace AForge
 
             if ( provideInnerRange )
             {
-                iMin = (int) Math.Ceiling( min );
-                iMax = (int) Math.Floor( max );
+                iMin = (min == (int) min) ? (int) min : (int) min+1;
+                iMax = (int) max;
             }
             else
             {
-                iMin = (int) Math.Floor( min );
-                iMax = (int) Math.Ceiling( max );
+                iMin = (int) min;
+                iMax = (max == (int)max) ? (int) max : (int) max+1;
             }
 
             return new IntRange( iMin, iMax );

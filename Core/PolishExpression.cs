@@ -10,6 +10,7 @@ namespace AForge
 {
     using System;
     using System.Collections;
+	using UnityEngine;
 
     // Quick and dirty implementation of polish expression evaluator
 
@@ -105,23 +106,23 @@ namespace AForge
                             break;
 
                         case "sin":			// sine
-                            arguments.Push( Math.Sin( v ) );
+                            arguments.Push( Mathf.Sin( (float)v ) );
                             break;
 
                         case "cos":			// cosine
-                            arguments.Push( Math.Cos( v ) );
+                            arguments.Push( Mathf.Cos( (float)v ) );
                             break;
 
                         case "ln":			// natural logarithm
-                            arguments.Push( Math.Log( v ) );
+                            arguments.Push( Mathf.Log( (float)v ) );
                             break;
 
                         case "exp":			// exponent
-                            arguments.Push( Math.Exp( v ) );
+                            arguments.Push( Mathf.Exp( (float)v ) );
                             break;
 
                         case "sqrt":		// square root
-                            arguments.Push( Math.Sqrt( v ) );
+                            arguments.Push( Mathf.Sqrt( (float)v ) );
                             break;
 
                         default:

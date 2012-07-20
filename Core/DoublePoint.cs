@@ -9,6 +9,7 @@
 namespace AForge
 {
     using System;
+	using UnityEngine;
 
     /// <summary>
     /// Structure for representing a pair of coordinates of double type.
@@ -72,7 +73,7 @@ namespace AForge
             double dx = X - anotherPoint.X;
             double dy = Y - anotherPoint.Y;
 
-            return System.Math.Sqrt( dx * dx + dy * dy );
+            return Mathf.Sqrt( (float) (dx * dx + dy * dy) );
         }
 
         /// <summary>
@@ -348,7 +349,7 @@ namespace AForge
         /// 
         public IntPoint Round( )
         {
-            return new IntPoint( (int) Math.Round( X ), (int) Math.Round( Y ) );
+            return new IntPoint( (int) Mathf.Round( (float)X ), (int) Mathf.Round( (float)Y ) );
         }
 
         /// <summary>
@@ -371,7 +372,7 @@ namespace AForge
         /// 
         public double EuclideanNorm( )
         {
-            return System.Math.Sqrt( X * X + Y * Y );
+            return Mathf.Sqrt( (float)(X * X + Y * Y) );
         }
     }
 }
